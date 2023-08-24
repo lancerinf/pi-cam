@@ -26,7 +26,7 @@ fswebcam --gmt \
 
 # Upload to S3
 echo "Uploading ${FILENAME} to ${S3_DESTINATION_LIVE}"
-aws s3 cp "${FILENAME}" "${S3_DESTINATION_LIVE}/latest.jpg"
+aws s3 cp "${FILENAME}" "${S3_DESTINATION_LIVE}/latest.jpg" --acl public-read
 
 echo "Uploading ${FILENAME} to ${S3_DESTINATION_LT}"
 aws s3 cp "${FILENAME}" "${S3_DESTINATION_LT}/${FILENAME}"
