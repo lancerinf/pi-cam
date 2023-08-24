@@ -17,4 +17,15 @@ pip install awscli
 ```
 
 ### S3 bucket/buckets and IAM user
-This script assumes the presence of local credentials sufficient to call `aws s3 cp` and one or more destination buckets that the user has permissions to upload to.
+This script assumes:
+* presence of default credentials for calling `aws s3 cp <src> <dst> --acl public-read`
+* one or more destination buckets that the user has permissions to upload to.
+
+The IAM permissions required are:
+```
+"Effect": "Allow",
+"Action": [
+    "s3:PutObject",
+    "s3:PutObjectAcl"
+]
+``` 
