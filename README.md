@@ -1,6 +1,8 @@
 # pi-cam
 Here is a script that I can use to take a camera pic on my rPi and upload it to some well-known locations on S3 for later use
 
+This project currently powers: [greenthumb.fede.rocks](https://greenthumb.fede.rocks)
+
 
 ## Prerequisites
 
